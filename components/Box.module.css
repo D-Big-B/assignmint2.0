@@ -1,0 +1,6 @@
+#box {
+  transition: all 0.1s ease-in-out;
+  border-radius: 78px;
+
+  padding: 4em 2em 4em 2em;
+}

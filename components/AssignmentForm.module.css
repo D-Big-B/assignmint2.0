@@ -1,0 +1,10 @@
+.selectedFiles {
+  list-style: none;
+  margin: 7px 0px;
+}
+.selectFileLabel {
+  display: none;
+}
+.selectFileInput {
+  display: none;
+}
