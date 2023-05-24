@@ -55,7 +55,7 @@ const handler = async (req, res) => {
           </div>
           <div style= " width: "100%", gap: 10, padding: "30px 0", display: "grid" ">
             <p style= " fontWeight: "800", fontSize: "1.2rem", padding: "0 30px" ">
-              Form Shoeshop Store
+              Form Assignmint
             </p>
             <div style= " fontSize: ".8rem", margin: "0 30px" ">
               <p>FullName: <b>${data.name}</b></p>
