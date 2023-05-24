@@ -81,7 +81,7 @@ const handler = async (req, res) => {
           console.log("Email sent");
 
           const response = await axios.post(
-            "http://localhost:3000/api/sendResponse",
+            `${process.env.CLIENT_URL}/api/sendResponse`,
             { email: data.email }
           );
 
