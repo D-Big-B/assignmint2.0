@@ -8,3 +8,8 @@
 .selectFileInput {
   display: none;
 }
+.fileCheck {
+  color: red;
+  font-size: 15px;
+  margin: 10px 0px;
+}

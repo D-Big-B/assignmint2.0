@@ -21,6 +21,7 @@ const AssignmentForm = () => {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const buttonRef = useRef(null);
+  const [fileCheck, setFileCheck] = useState("");
   const handleFileSelect = (e) => {
     const files = Array.from(e.target.files);
     setSelectedFiles(files);
@@ -29,7 +30,9 @@ const AssignmentForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // handle form submission here
-    console.log(selectedFiles, description, subject, deadline, contactNumber);
+    if (selectedFiles.length === 0) {
+      setFileCheck("Please select one or more files");
+    }
     setLoading(true);
     const formData = new FormData();
 
@@ -48,6 +51,7 @@ const AssignmentForm = () => {
       formData.append("emailObject", JSON.stringify(values));
       try {
         // axios.post("/api/sendResponse", { email });
+
         axios.post("/api/sendMail", formData, {
           headers: {
             "Content-Type": "multipart/form-data",
@@ -160,6 +164,7 @@ const AssignmentForm = () => {
                   onChange={handleFileSelect}
                   ref={buttonRef}
                 />
+                <p className={styles.fileCheck}>{fileCheck}</p>
                 <ul>
                   {selectedFiles.map((file, index) => (
                     <li key="{index}" className={styles.selectedFiles}>
