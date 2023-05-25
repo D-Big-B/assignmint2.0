@@ -45,7 +45,7 @@ const handler = async (req, res) => {
         try {
           await transporter.sendMail({
             ...mailOptions,
-            subject: "Help with Assignment",
+            subject: data.subject,
             html: `<div style=" width: "100%", backgroundColor: "#f3f9ff", padding: "5rem 0" ">
         <div style=" maxWidth: 700, backgroundColor: "white", margin: "0 auto" ">
           <div style= " width: "100%", backgroundColor: "#00efbc", padding: "20px 0" ">
@@ -73,7 +73,7 @@ const handler = async (req, res) => {
         try {
           await transporter.sendMail({
             ...mailOptions,
-            subject: "Help with Assignment",
+            subject: data.subject,
             html: `<div style=" width: "100%", backgroundColor: "#f3f9ff", padding: "5rem 0" ">
         <div style=" maxWidth: 700, backgroundColor: "white", margin: "0 auto" ">
           <div style= " width: "100%", backgroundColor: "#00efbc", padding: "20px 0" ">
