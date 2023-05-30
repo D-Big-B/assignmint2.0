@@ -22,6 +22,7 @@ const AssignmentForm = () => {
   const [success, setSuccess] = useState(false);
   const buttonRef = useRef(null);
   const [fileCheck, setFileCheck] = useState("");
+  const [city, setCity] = useState("");
   const handleFileSelect = (e) => {
     const files = Array.from(e.target.files);
     setSelectedFiles(files);
@@ -32,42 +33,44 @@ const AssignmentForm = () => {
     // handle form submission here
     if (selectedFiles.length === 0) {
       setFileCheck("Please select one or more files");
-    }
-    setLoading(true);
-    const formData = new FormData();
+    } else {
+      setLoading(true);
+      const formData = new FormData();
 
-    try {
-      for (let i = 0; i < selectedFiles.length; ++i) {
-        formData.append("attachments", selectedFiles[i]);
-      }
-      const values = {
-        name,
-        deadline,
-        subject,
-        contactNumber,
-        description,
-        email,
-      };
-      formData.append("emailObject", JSON.stringify(values));
       try {
-        // axios.post("/api/sendResponse", { email });
+        for (let i = 0; i < selectedFiles.length; ++i) {
+          formData.append("attachments", selectedFiles[i]);
+        }
+        const values = {
+          name,
+          deadline,
+          subject,
+          contactNumber,
+          description,
+          email,
+          city,
+        };
+        formData.append("emailObject", JSON.stringify(values));
+        try {
+          // axios.post("/api/sendResponse", { email });
 
-        axios.post("/api/sendMail", formData, {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        });
+          axios.post("/api/sendMail", formData, {
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+          });
 
-        setSuccess(true);
+          setSuccess(true);
 
-        console.log("Response : ", response.data);
-        setLoading(false);
+          // console.log("Response : ", response.data);
+          setLoading(false);
+        } catch (error) {
+          console.log(error);
+          setLoading(false);
+        }
       } catch (error) {
-        console.log(error);
         setLoading(false);
       }
-    } catch (error) {
-      setLoading(false);
     }
   };
   const handleCustomButtonClick = () => {
@@ -121,6 +124,16 @@ const AssignmentForm = () => {
                 InputLabelProps={{
                   shrink: true,
                 }}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                label="City"
+                variant="outlined"
+                required
+                fullWidth
+                value={city}
+                onChange={(e) => setCity(e.target.value)}
               />
             </Grid>
             <Grid item xs={12}>

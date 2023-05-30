@@ -628,7 +628,7 @@ const handler = async (req, res) => {
     console.log("From sendResponse", req.body);
     try {
       await transporter.sendMail({
-        from: process.env.EMAIL,
+        from: '"Assignmint" <support@assignmint.io>',
         to: req.body.email,
         subject: "Confirmation Mail!",
         html: responseTemplate,

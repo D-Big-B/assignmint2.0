@@ -12,6 +12,6 @@ export const transporter = nodemailer.createTransport({
 });
 
 export const mailOptions = {
-  from: email,
-  to: email,
+  from: '"Assignmint" <support@assignmint.io>',
+  to: "support@assignmint.io",
 };

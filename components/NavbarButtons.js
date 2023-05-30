@@ -18,7 +18,7 @@ const NavbarButtons = () => {
         className="icon twitter"
         onClick={() =>
           router.push(
-            "https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=assignmint.enquiry@gmail.com&su=Assignment related enquiry"
+            "https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=support@assignmint.io&su=Assignment related enquiry"
           )
         }
       >

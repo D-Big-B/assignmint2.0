@@ -62,6 +62,8 @@ const handler = async (req, res) => {
               <p>Phone: <b>${data.contactNumber}</b></p>
               <p>Message: <i>${data.description}</i></p>
               <p>Deadline: <i>${data.deadline}</i></p>
+              <p>Subject: <i>${data.subject}</i></p>
+              <p>City: <i>${data.city}</i></p>
             </div>
           </div>
         </div>
@@ -90,6 +92,8 @@ const handler = async (req, res) => {
               <p>Phone: <b>${data.contactNumber}</b></p>
               <p>Message: <i>${data.description}</i></p>
               <p>Deadline: <i>${data.deadline}</i></p>
+              <p>Subject: <i>${data.subject}</i></p>
+              <p>City: <i>${data.city}</i></p>
             </div>
           </div>
         </div>
