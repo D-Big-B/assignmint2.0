@@ -5,7 +5,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <SEO
-        title="Assingmint"
+        title="Assignmint"
         description="Academic Excellence Made Effortless: Speedy Assignments and Exam Assistance at Unbeatable Prices"
         keywords={[
           "assignment solver",
@@ -20,6 +20,8 @@ function MyApp({ Component, pageProps }) {
           "cheap assignment",
         ]}
         icon="/favicon/favicon.ico"
+        colorScheme="light"
+        themeColor="#000000"
       />
       <Component {...pageProps} />
     </>
