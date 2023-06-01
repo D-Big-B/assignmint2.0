@@ -25,6 +25,9 @@ const upload = multer({
 
 // Create an API route handler for the file upload
 const handler = async (req, res) => {
+  if (req.method === "GET") {
+    res.status(200).json({ data: "Hello from Assignmint" });
+  }
   //   console.log(req.body);
   if (req.method === "POST") {
     console.log("From send mail");
