@@ -13,7 +13,7 @@ export const config = {
 // Create an instance of the multer middleware with desired configuration
 const upload = multer({
   storage: multer.diskStorage({
-    destination: "temp/uploads",
+    destination: "/temp/uploads",
     filename: (req, file, cb) => {
       // Generate a unique filename for the uploaded file
       const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
