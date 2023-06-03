@@ -11,4 +11,13 @@
   color: white;
   text-align: center;
   padding: 2em 0;
+  font-size: 14px;
+}
+.container p {
+  margin-bottom: 15px;
+}
+
+.container span {
+  font-size: 18px;
+  margin-bottom: 10px;
 }
