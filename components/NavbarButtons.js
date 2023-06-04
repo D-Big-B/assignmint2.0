@@ -6,7 +6,7 @@ const NavbarButtons = () => {
   return (
     <ul className="wrapper" style={{ padding: "1em 2em 0em 0" }}>
       <li
-        onClick={() => router.push("https://wa.me/9729294982")}
+        onClick={() => router.push("https://wa.me/9034089256")}
         className="icon facebook"
       >
         <span className="tooltip">Whatsapp</span>
