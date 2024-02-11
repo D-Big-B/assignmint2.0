@@ -1,0 +1,25 @@
+.successStories {
+  height: 60vh;
+  width: 100%;
+  background-color: #111;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 25px;
+}
+.storyCard {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.storyCard .counter {
+  font-size: 42px;
+  margin: 20px 0;
+}
+.storyCard span {
+  font-size: 16px;
+  text-transform: uppercase;
+  width: 150px;
+  text-align: center;
+}

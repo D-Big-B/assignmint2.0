@@ -1,0 +1,30 @@
+.whyChooseUs {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  padding: 25px;
+}
+.whyChooseUsLeft {
+  flex: 0.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.whyChooseUsLeft h1 {
+  margin: 10px 0;
+  font-size: 28px;
+  font-weight: bold;
+}
+.whyChooseUsLeft p {
+  margin-top: -50px;
+  font-size: 16px;
+  width: 70ch;
+  letter-spacing: 1px;
+  line-height: 20px;
+}
+.whyChooseUsRight {
+  flex: 0.4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

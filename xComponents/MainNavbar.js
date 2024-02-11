@@ -9,9 +9,9 @@ const MainNavbar = () => {
   return (
     <>
       <nav id={styles.nav}>
-        <Link href="/">
-          <AssignmintLogo />
-        </Link>
+        {/* <Link href="/"> */}
+        <AssignmintLogo />
+        {/* </Link> */}
         <div>
           <ul
             id={styles.navbar}

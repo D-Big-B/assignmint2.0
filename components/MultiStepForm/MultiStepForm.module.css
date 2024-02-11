@@ -1,0 +1,55 @@
+.landingFormContainer {
+  display: flex;
+  justify-content: center;
+  color: #111;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+.landingFormContainer h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.landingForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 300px;
+}
+.fieldContainer {
+  margin: 8px 0;
+}
+.fieldContainer label {
+  font-size: 12px;
+}
+.fieldContainer input {
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #fff;
+}
+.fieldContainer p {
+  color: red;
+}
+.submitForm {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #111;
+  color: #fff;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+}
+.dropZone {
+  height: 80px;
+  width: 100%;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px #111 dotted;
+  font-size: 16px;
+  cursor: pointer;
+}
