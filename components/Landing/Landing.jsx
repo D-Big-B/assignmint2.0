@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Landing.module.css";
 import LandingForm from "./LandingForm";
+import SuccessPanel from "../SuccessPanel/SuccessPanel";
 export default function Landing() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
   return (
     <section className={styles.landing}>
       <div className={styles.landing__left}>
@@ -15,7 +17,11 @@ export default function Landing() {
         </div>
       </div>
       <div className={styles.landing__right}>
-        <LandingForm />
+        {isSubmitted ? (
+          <SuccessPanel />
+        ) : (
+          <LandingForm setIsSubmitted={setIsSubmitted} />
+        )}
       </div>
     </section>
   );

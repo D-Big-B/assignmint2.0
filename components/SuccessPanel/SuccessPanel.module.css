@@ -1,0 +1,27 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container h4 {
+  font-size: 40px;
+  margin: 20px 0px;
+}
+.container h6 {
+  font-size: 28px;
+  margin: 10px 0px;
+  text-align: center;
+}
+
+.container p {
+  font-size: 18px;
+  text-align: center;
+}
+#box {
+  transition: all 0.1s ease-in-out;
+  border-radius: 78px;
+
+  padding: 4em 2em 4em 2em;
+}

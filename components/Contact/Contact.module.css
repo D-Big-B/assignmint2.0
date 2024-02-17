@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  width: 100%;
+  flex: 1;
+}
+.containerLeft {
+  /* flex: 1; */
+  width: 40%;
+  padding-right: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.containerLeft h2 {
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+
+.containerLeft p {
+  margin: 10px 0;
+}
+.containerLeft p span {
+  font-weight: bold;
+}
+.containerRight {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.inputContainer {
+  margin-bottom: 20px;
+}
+.inputContainer input {
+  width: 45%;
+  padding: 10px;
+  margin-right: 0%;
+  font-size: 16px;
+}
+.textContainer textarea {
+  width: 90%;
+  height: 120px;
+  padding: 10px;
+  font-size: 16px;
+}
+.containerRight button {
+  width: 90%;
+  padding: 10px;
+  font-size: 20px;
+  background-color: #111;
+  color: #fff;
+  margin-top: 20px;
+}

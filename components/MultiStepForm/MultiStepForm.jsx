@@ -4,6 +4,7 @@ import { Provider } from "./MultiStepFormContext";
 import Review from "./Review";
 import AssignmentDetails from "./AssignmentDetails";
 import ReferenceDetails from "./ReferenceDetails";
+import SuccessPanel from "@/components/SuccessPanel/SuccessPanel";
 
 const { Step } = Steps;
 
@@ -16,9 +17,8 @@ const assignmentDetailsInitialState = {
 };
 
 const referenceDetailsInitialState = {
-  address1: "",
-  address2: "",
-  city: "",
+  remarks: "",
+  supportingDocuments: "",
 };
 
 const renderStep = (step) => {
@@ -35,6 +35,7 @@ const renderStep = (step) => {
 };
 
 const MultiStepForm = () => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [assignmentDetails, setAssignmentDetails] = useState(
     assignmentDetailsInitialState
   );
@@ -53,6 +54,13 @@ const MultiStepForm = () => {
     setCurrentStep(currentStep + 1);
   };
   const prev = () => setCurrentStep(currentStep - 1);
+  if (isSubmitted) {
+    return (
+      <>
+        <SuccessPanel />
+      </>
+    );
+  }
   return (
     <Provider
       value={{
@@ -62,6 +70,7 @@ const MultiStepForm = () => {
         prev,
         referenceDetails,
         setReferenceDetails,
+        setIsSubmitted,
       }}
     >
       <ConfigProvider

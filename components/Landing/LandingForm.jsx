@@ -6,11 +6,32 @@ import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import styles from "./Landing.module.css";
 
-const fileTypes = ["JPEG", "PNG", "GIF"];
-export default function LandingForm() {
-  const [file, setFile] = useState(null);
+const fileTypes = ["JPEG", "JPG", "PNG", "PDF", "ZIP"];
+export default function LandingForm({ setIsSubmitted }) {
+  const [file, setFile] = useState([]);
+  const [contactError, setContactError] = useState("");
+  const [fileError, setFileError] = useState("");
+  // const contactField = useRef("");
+
   const handleChange = (file) => {
-    setFile(file);
+    if (file.length > 0) {
+      setFile([]);
+    }
+    if (file.length > 5) {
+      setFileError("Maximum 5 files are allowed at once");
+    } else {
+      setFileError("");
+      const filesArray = Array.from(file);
+
+      setFile(filesArray);
+    }
+  };
+  const handleContactChange = (contactNumber) => {
+    const regex = /^\+(?:[0-9] ?){6,14}[0-9]$/;
+    if (regex.test(contactNumber)) setContactNumber(contactNumber);
+    else {
+      setContactError("Please Enter Valid Phone Number");
+    }
   };
   const formik = useFormik({
     initialValues: {
@@ -34,7 +55,24 @@ export default function LandingForm() {
         .min(new Date(), "Please Select Valid Date"),
     }),
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      if (contactNumber && file.length > 0) {
+        let assignmentDetailsDebug = {
+          name: values.name,
+          email: values.email,
+          contactNumber: contactNumber,
+          deadline: values.deadline,
+          files: file,
+        };
+
+        setIsSubmitted(true);
+      } else {
+        if (!contactNumber) {
+          setContactError("Required");
+        }
+        if (file.length === 0) {
+          setFileError("Required");
+        }
+      }
     },
   });
   return (
@@ -70,10 +108,10 @@ export default function LandingForm() {
             <PhoneInput
               name="contactNumber"
               value={formik.values.contactNumber}
-              onChange={formik.handleChange}
+              onChange={handleContactChange}
             />
           </div>
-          {formik.errors.contactNumber && <p>{formik.errors.contactNumber}</p>}
+          {contactError && <p>{contactError}</p>}
         </div>
         <div className={styles.fieldContainer}>
           <label>Deadline*</label>
@@ -89,6 +127,12 @@ export default function LandingForm() {
         </div>
         <div className={styles.fieldContainer}>
           <label>Select Assignment File(s)*</label>
+          {file.length > 0 &&
+            file.map((fileEle) => (
+              <div className={styles.fileName} key={fileEle.name}>
+                {fileEle.name}
+              </div>
+            ))}
           <FileUploader
             multiple={true}
             handleChange={handleChange}
@@ -97,6 +141,7 @@ export default function LandingForm() {
           >
             <div className={styles.dropZone}>Upload Here</div>
           </FileUploader>
+          {fileError && <p>{fileError}</p>}
         </div>
         <div>
           <button className={styles.submitForm} type="submit">

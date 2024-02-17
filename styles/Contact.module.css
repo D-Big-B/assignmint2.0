@@ -1,0 +1,14 @@
+.main {
+  display: flex;
+  width: 100%;
+  min-height: 90vh;
+  /* justify-content: center; */
+  /* align-items: center; */
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+
+.main h1 {
+  margin: 30px 0;
+}
