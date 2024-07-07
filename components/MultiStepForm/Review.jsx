@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 import MultiStepFormContext from "./MultiStepFormContext";
 import styles from "./MultiStepForm.module.css";
 import Lottie from "lottie-react";
+import loading from "@/public/loading.json";
 
 const Review = () => {
   const { assignmentDetails, referenceDetails, next, prev, setIsSubmitted } =

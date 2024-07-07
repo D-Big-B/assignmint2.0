@@ -130,8 +130,8 @@ export default function AssignmentDetails() {
           <label>Select Assignment File(s)*</label>
           {file.length > 0 &&
             file.map((fileEle) => (
-              <div className={styles.fileName} key={fileEle.name}>
-                {fileEle.name}
+              <div className={styles.fileNameContainer} key={fileEle.name}>
+                <span className={styles.fileName}>{fileEle.name}</span>
               </div>
             ))}
           <FileUploader

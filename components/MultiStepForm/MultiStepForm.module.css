@@ -82,9 +82,16 @@
   list-style: none;
 }
 
+.fileNameContainer {
+  background-color: #ddd;
+  height: 40px;
+  padding: 10px 0;
+  scroll-behavior: auto;
+}
 .fileName {
   color: black;
   font-weight: 600;
+  margin: 5px 0;
 }
 
 @media screen and (max-width: 480px) {
