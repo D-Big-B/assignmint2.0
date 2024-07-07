@@ -6,7 +6,7 @@ export default function Layout({ children }) {
   return (
     <>
       <Header />
-      {children}
+      <main style={{ paddingTop: "10vh" }}>{children}</main>
       <Footer />
     </>
   );

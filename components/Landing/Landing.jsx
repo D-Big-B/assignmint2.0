@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import styles from "./Landing.module.css";
 import LandingForm from "./LandingForm";
 import SuccessPanel from "../SuccessPanel/SuccessPanel";
+import useWindowSize from "@/hooks/useWindowSize";
 export default function Landing() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const size = useWindowSize();
   return (
     <section className={styles.landing}>
       <div className={styles.landing__left}>

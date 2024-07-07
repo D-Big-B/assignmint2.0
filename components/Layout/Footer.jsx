@@ -13,7 +13,9 @@ export default function Footer() {
             intended to be used only for further individual research, reference
             or study purposes.
           </p>
-          <Image src="/logo.png" alt="assignmint" width={280} height={80} />
+          <div className={styles.footerLogo}>
+            <Image src="/logo.png" alt="assignmint" width={280} height={80} />
+          </div>
         </div>
         <div className={styles.footerSection}>
           <h1>Useful Links</h1>
@@ -30,15 +32,17 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className={styles.footerSection}>
-          <h1>Address</h1>
-          <p>3 Bellbridge Dr, Hoppers Crossing, Melbourne VIC 3029</p>
-          <p>Whats App</p>
-          <p>support@assignmint.com</p>
+        <div className={styles.footerAddress}>
+          <div className={styles.footerSection}>
+            <h1>Address</h1>
+            <p>3 Bellbridge Dr, Hoppers Crossing, Melbourne VIC 3029</p>
+            <p>Whats App</p>
+            <p>support@assignmint.com</p>
+          </div>
         </div>
       </div>
       <p className={styles.footerText}>
-        Copyright © 2023 All rights reserved by
+        Copyright © 2024 All rights reserved by
       </p>
     </footer>
   );

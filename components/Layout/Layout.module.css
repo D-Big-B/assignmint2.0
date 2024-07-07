@@ -6,11 +6,16 @@
   padding: 0 25px;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  z-index: 101;
 }
 .logo {
   flex: 1;
 }
-.navItems {
+.navContainer {
+  flex: 1;
+}
+#navItems {
   color: #fff;
   flex: 1;
   display: flex;
@@ -18,7 +23,7 @@
   justify-content: space-around;
   font-weight: bold;
 }
-.navItems li {
+#navItems li {
   cursor: pointer;
 }
 .footer {
@@ -55,4 +60,134 @@
 .usefulLinks {
   display: flex;
   justify-content: space-between;
+}
+.usefulLinks li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+@media screen and (max-width: 775px) {
+  .footerAddress {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footerAddress {
+    display: none;
+  }
+  .footer {
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: fit-content;
+    padding: 30px 20px;
+  }
+  .footerContainer {
+    display: flex;
+    padding: 25px 20px;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .footerLogo {
+    display: none;
+  }
+  .footerSection {
+    margin: 20px 0;
+  }
+}
+
+#nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  padding: 20px 20px;
+  color: rgb(22, 22, 22);
+}
+
+#navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+
+#navbar li a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: rgb(22, 22, 22);
+  transition: 0.3s ease-in-out;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+  color: #17cf97;
+}
+
+#navbar li a:hover::after,
+#navbar li a.active::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+#mobile {
+  display: none;
+  position: absolute !important;
+  right: 40px !important;
+  z-index: 100;
+}
+
+#mobile i {
+  align-items: center;
+}
+
+@media screen and (max-width: 760px) {
+  .header {
+    padding: 5px;
+  }
+  #navItems {
+    display: none;
+  }
+
+  .navbar_active {
+    width: 100vw;
+    height: 90vh;
+    background-color: #111;
+    z-index: 100;
+    position: fixed;
+    top: 10vh;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 100px;
+  }
+  .navbar_active li {
+    list-style: none;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  #mobile {
+    display: block;
+  }
+
+  #mobile i {
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+  }
 }

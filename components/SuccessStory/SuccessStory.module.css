@@ -5,6 +5,7 @@
   display: flex;
   justify-content: space-around;
   padding: 0 25px;
+  flex-wrap: wrap;
 }
 .storyCard {
   color: #fff;
@@ -22,4 +23,10 @@
   text-transform: uppercase;
   width: 150px;
   text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+  .successStories {
+    height: 90vh;
+  }
 }

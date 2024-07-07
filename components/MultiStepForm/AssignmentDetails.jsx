@@ -33,8 +33,10 @@ export default function AssignmentDetails() {
   };
   const handleContactChange = (contactNumber) => {
     const regex = /^\+(?:[0-9] ?){6,14}[0-9]$/;
-    if (regex.test(contactNumber)) setContactNumber(contactNumber);
-    else {
+    if (regex.test(contactNumber)) {
+      setContactNumber(contactNumber);
+      setContactError("");
+    } else {
       setContactError("Please Enter Valid Phone Number");
     }
   };

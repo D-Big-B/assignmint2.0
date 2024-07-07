@@ -19,9 +19,7 @@ export default function Home() {
           <AssignmentType />
           <SuccessStory />
           <WhyChooseUs />
-
           <GlobalPresence />
-
           <Review />
         </main>
       </Layout>

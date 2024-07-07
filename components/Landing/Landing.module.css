@@ -1,24 +1,22 @@
 .landing {
-  height: 90vh;
+  height: 100vh;
   width: 100%;
   display: flex;
 }
 .landing__left {
   height: 100%;
   flex: 1;
-  /* background-color: #111; */
 }
 .left__container {
   padding: 0 25px;
   display: flex;
   flex-direction: column;
   height: 100%;
-  /* justify-content: center; */
+  justify-content: center;
 }
 .left__container h3 {
   font-size: 18px;
   font-weight: 600;
-  margin-top: 200px;
 }
 .left__container h1 {
   font-size: 36px;
@@ -107,7 +105,99 @@
   font-size: 16px;
   cursor: pointer;
 }
+.fileNameContainer {
+  background-color: #ddd;
+  height: 40px;
+  padding: 10px 0;
+  scroll-behavior: auto;
+}
 .fileName {
   color: black;
   font-weight: 600;
+  margin: 5px 0;
+}
+.formHeading {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .landingFormContainer {
+    border: none;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .landing {
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+  }
+  .formHeading {
+    width: 90%;
+    display: block;
+    text-align: left;
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  .landing__right {
+    margin-top: -200px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .landing {
+    height: auto;
+    padding-top: 120px;
+  }
+  .landing__left {
+    height: 40vh;
+    flex: 0.5;
+    margin-bottom: 120px;
+  }
+  .left__container {
+    padding: 0 10px;
+  }
+  .left__container h3 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+  .left__container h1 {
+    font-size: 32px;
+    font-weight: bold;
+  }
+  .left__container span {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .landing__right {
+    /* background-color: bisque; */
+    height: 100%;
+    flex: 0.8;
+    margin-top: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .formHeading {
+    width: 90%;
+    display: block;
+    text-align: left;
+    font-size: 32px;
+    font-weight: bold;
+  }
+  .landingFormContainer {
+    border: 0px solid #111;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    color: #111;
+    flex-direction: column;
+    align-items: center;
+  }
+  .submitForm {
+    background-color: #111;
+    color: #fff;
+  }
 }

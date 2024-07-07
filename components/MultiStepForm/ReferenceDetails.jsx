@@ -7,7 +7,7 @@ import MultiStepFormContext from "./MultiStepFormContext";
 
 import styles from "./MultiStepForm.module.css";
 
-const fileTypes = ["JPEG", "PNG", "GIF"];
+const fileTypes = ["JPEG", "JPG", "PNG", "PDF", "ZIP"];
 
 export default function ReferenceDetails() {
   const [fileError, setFileError] = useState("");

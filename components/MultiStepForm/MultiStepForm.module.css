@@ -86,3 +86,12 @@
   color: black;
   font-weight: 600;
 }
+
+@media screen and (max-width: 480px) {
+  .landingForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+  }
+}

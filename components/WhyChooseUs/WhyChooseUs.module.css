@@ -6,25 +6,74 @@
 }
 .whyChooseUsLeft {
   flex: 0.6;
+  padding: 0 30px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
 }
 .whyChooseUsLeft h1 {
   margin: 10px 0;
   font-size: 28px;
   font-weight: bold;
 }
-.whyChooseUsLeft p {
-  margin-top: -50px;
-  font-size: 16px;
-  width: 70ch;
+.whyChooseUsLeft li {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: 500;
+  width: 60ch;
   letter-spacing: 1px;
   line-height: 20px;
+}
+.whyChooseUs li span {
+  font-weight: bold;
+  font-size: 20px;
 }
 .whyChooseUsRight {
   flex: 0.4;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 900px) {
+  .whyChooseUsRight {
+    display: none;
+  }
+  .whyChooseUs {
+    display: block;
+  }
+
+  .whyChooseUsLeft h1 {
+    margin: 10px 0;
+
+    font-weight: bold;
+  }
+  .whyChooseUsLeft li {
+    width: 100%;
+    letter-spacing: 1px;
+    line-height: 20px;
+    margin: 20px 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .whyChooseUs {
+    display: block;
+    height: auto;
+  }
+  .whyChooseUsLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .whyChooseUsLeft h1 {
+    margin: 10px 0;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .whyChooseUsLeft li {
+    font-size: 16px;
+    width: 100%;
+    letter-spacing: 1px;
+    line-height: 20px;
+    margin: 20px 0;
+  }
 }

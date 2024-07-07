@@ -105,6 +105,9 @@ Reviews
   height: 60px;
   width: 500px;
 }
+.buttonContainer {
+  margin-top: 20px;
+}
 .prevBtn,
 .nextBtn {
   font-size: 1.5rem;
@@ -119,4 +122,38 @@ Reviews
 .icon {
   font-size: 4rem;
   color: red;
+}
+
+@media screen and (max-width: 376px) {
+  .reviews {
+    height: 80vh;
+    width: 100%;
+    padding-bottom: 100px;
+  }
+  .imgContainer {
+    width: 80px;
+    height: 80px;
+
+    margin-bottom: 1rem;
+  }
+  .quoteIcon {
+    position: absolute;
+
+    width: 1.5rem;
+    height: 1.5rem;
+
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .info {
+    width: 100%;
+  }
+  .buttonContainer {
+    margin-top: 60px;
+  }
+  .reviews {
+    height: 50vh;
+  }
 }
